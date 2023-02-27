@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.loader.content.AsyncTaskLoader;
 
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class DownloadImage extends AsyncTask<String, Void, Bitmap> {
 
 
     @Override
-    protected Bitmap doInBackground(String... strings) {
+    protected Bitmap doInBackground(@NonNull String... strings) {
         String urls = strings[0];
         Bitmap result = null;
         try{
